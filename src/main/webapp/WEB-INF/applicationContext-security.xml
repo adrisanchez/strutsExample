@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.1.xsd">
+                        
+    <http auto-config="false" entry-point-ref="authenticationProcessingFilterEntryPoint">
+    	<intercept-url pattern="/login*"  filters="none"/>
+    	<intercept-url pattern="/inicio*"  access="ROLE_ADMIN, ROLE_READ"/>
+    	<intercept-url pattern="/acercade*"  access="ROLE_ADMIN, ROLE_READ"/>
+    	<logout logout-success-url="/login.action" invalidate-session="true"/>
+  	</http>
+  	
+	<beans:bean id="exampleAuthenticationProvider" class="es.test.example.control.seguridad.ExampleAuthenticationProvider">
+			<custom-authentication-provider/>
+	</beans:bean> 
+		
+	<beans:bean id="authenticationProcessingFilter" class="es.test.example.control.seguridad.ExampleAuthenticationFilter">   
+		<custom-filter position="AUTHENTICATION_PROCESSING_FILTER" />
+		<beans:property name="defaultTargetUrl" value="/inicio.action" />
+		<beans:property name="authenticationFailureUrl" value="/loginIncorrecto.action" />
+		<beans:property name="authenticationManager" ref="authenticationManager" />
+	</beans:bean>
+
+	<authentication-manager alias="authenticationManager" />
+	
+	<beans:bean id="authenticationProcessingFilterEntryPoint" class="es.test.example.control.seguridad.ExampleAuthenticationEntryPoint">
+	   <beans:property name="loginFormUrl" value="/login.action" />
+       <beans:property name="forceHttps" value="false" />
+	</beans:bean>
+	
+</beans:beans>

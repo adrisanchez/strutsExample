@@ -1,0 +1,57 @@
+<!DOCTYPE struts PUBLIC  
+     "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"  
+     "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.mapper.action.prefix.enabled"   value="true"/>
+	<package name="general" namespace="/" extends="struts-default">
+	
+		<result-types>
+			<result-type name="redirect-action" class="org.apache.struts2.dispatcher.ServletActionRedirectResult"/>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		
+		<interceptors>
+			<interceptor name="exampleException" class="es.test.example.commons.exceptions.ExampleExceptionInterceptor"/>
+			<interceptor-stack name="myStack"> 
+		        <interceptor-ref name="exampleException"/>
+		        <!--  Esta en bytes -->
+		        <interceptor-ref name="fileUpload">
+		           <param name="maximumSize">2097152</param> 
+		        </interceptor-ref>
+		        <interceptor-ref name="defaultStack"/> 
+		    </interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="myStack"/>
+		
+
+      	<action name="inicio" method="inicio" class="es.test.example.control.action.LoginAction"> 
+      		<result type="tiles" name="success">tile.inicio</result>
+      		<result type="tiles" name="input">tile.inicio</result>
+        </action>
+        
+        <action name="login" method="login" class="es.test.example.control.action.LoginAction">           
+            <result type="tiles" name="success">tile.login</result>
+            <result type="tiles" name="input">tile.login</result>
+        </action>  
+
+        <action name="loginIncorrecto" method="loginIncorrecto" class="es.test.example.control.action.LoginAction">           
+            <result type="tiles" name="success">tile.login</result>
+            <result type="tiles" name="input">tile.login</result>
+        </action>  
+        
+        <action name="acercade" method="acercaDe" class="es.test.example.control.action.LoginAction">           
+            <result type="tiles" name="success">tile.acercade</result>
+            <result type="tiles" name="input">tile.acercade</result>
+        </action> 
+        
+       
+        <action name="test" method="testMethod" class="es.test.example.control.action.TestAction">
+            <result type="tiles" name="success">tile.test</result>
+        </action>        
+        
+       
+        
+     </package>
+      
+</struts>

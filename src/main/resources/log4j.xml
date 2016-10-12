@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <!-- Log de escritura en consola -->
+	<appender name="ExampleConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Target" value="System.out"/>
+        <param name="Threshold" value="WARN"/>
+		 <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss,SSS} %-5p (%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+
+	<!-- Log de escritura en fichero -->
+    <appender name="Example_FileAppender" class="org.apache.log4j.RollingFileAppender">
+       <param name="File" value="${catalina.home}/logs/example_aplicacion.log" />
+       <param name="Append" value="true"/>
+       <param name="MaxBackupIndex" value="10"/>
+       <param name="MaxFileSize" value="500KB"/>
+       <layout class="org.apache.log4j.PatternLayout">           
+            <param name="ConversionPattern" value="%d{dd-MMM-yyyy HH:mm:ss,SSS} %-5p (%F:%L - %M()) [%t] - %m%n"/>
+        </layout>
+    </appender>
+        
+    <appender name="Example_JMESA_FileAppender" class="org.apache.log4j.RollingFileAppender">
+       <param name="File" value="${catalina.home}/logs/example_aplicacion_jmesa.log" />
+       <param name="Append" value="true"/>
+       <param name="MaxBackupIndex" value="10"/>
+       <param name="MaxFileSize" value="500KB"/>
+       <layout class="org.apache.log4j.PatternLayout">           
+            <param name="ConversionPattern" value="%d{dd-MMM-yyyy HH:mm:ss,SSS} %-5p (%F:%L - %M()) [%t] - %m%n"/>
+        </layout>
+    </appender>
+    
+	
+	<category name="es.test.example">
+        <priority value="debug"/>
+        <appender-ref ref="Example_FileAppender"/>
+    </category>
+    <category name="org.springframework">
+        <priority value="debug"/>
+        <appender-ref ref="Example_FileAppender"/>
+    </category>
+    <category name="org.jmesa">
+        <priority value="info"/>
+        <appender-ref ref="Example_JMESA_FileAppender"/>
+    </category>
+    
+       <root>
+	 <priority value ="INFO"/>    
+     <appender-ref ref="Example_FileAppender"/>
+     <appender-ref ref="ExampleConsoleAppender"/>
+   </root>
+    
+</log4j:configuration>

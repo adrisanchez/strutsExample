@@ -1,0 +1,32 @@
+.sel{margin-top:12px;}
+
+.but{ padding: 2px; }
+
+table.tabcss td {
+	padding-right:10px;
+}
+
+.dis{ background-color:lightgray; border:1px solid gray;}
+
+#exampleErrors { 
+	background-color: ##ffffff; 
+	border: 1px solid #00567c;
+	float:left;
+	width: 750px;
+	margin-bottom:2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	}
+#exampleMessages {	background-color: #ffffff; border: 1px solid black; padding-top: 3px;padding-bottom: 3px;}
+#exampleErrors ul.errorMessage li {
+	list-style-type: none; 
+	color: #00567c; 
+/* 	margin-left: -20px; */
+	}
+#exampleMessages ul.actionMessage li { 
+	list-style-type: none;
+	color: #000000; 
+/* 	margin-left: -20px; */
+}
+#exampleErrors ul.fieldError li { list-style-type: none; color: #FF0000; margin-left: -20px;}
+

@@ -1,0 +1,411 @@
+/* CSS */
+
+
+/* FORMATEO */
+* {
+	margin:0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none
+}
+
+
+.navbar-azul {
+	height: 70px;
+  	background: #00567c;
+ 	border-radius: 0;
+  	margin-bottom: 0;}
+
+/* BODY */
+body {
+	background: #dddddd;
+	font-family: 'Roboto', sans-serif;}
+
+
+/* TITULOS */
+
+h1 {
+	color: #00567c;
+	font-size: 35px;
+	margin: 0;
+	padding:10px 0 0 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	text-transform: uppercase;
+	border-bottom: 1px dotted grey;
+	margin-bottom: 10px;}
+
+h3 {
+	padding: 10px 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;}
+
+
+/* CABECERA */
+
+.navbar-default {
+	background: #00567c;
+	border-radius:0;
+	margin-bottom: 0}
+
+
+.navbar-brand-movil {
+	display:none;}
+
+.navbar-default .nombre, .navbar-default .salir {
+	color:white;
+	margin-top: 10px;
+	font-size: 12px;}
+
+
+.glyphicon-remove-circle {
+	color: #dadada;
+	font-size: 20px;
+	padding: 20px;
+	text-align: right}
+
+a:hover .glyphicon-remove-circle {
+	color:white;}
+
+.nombre li span {
+	font-weight: bold}
+
+
+/* MENU */
+
+.menu-superior {
+	background: white}
+
+.menu-superior>li.active>a, .menu-superior>li.active>a:focus, 
+.menu-superior>li.active>a:hover {
+	border-bottom: 5px solid #00567c; 
+	background: none; 
+	color: #00567c;}
+
+.menu-superior>li>a {
+	border-radius: 0;
+	color: #00567c;
+	font-size: 15px;}
+
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand {
+	font-size: 14px;
+	color: #00567c;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;}
+
+
+/* MIGA DE PAN */
+
+.breadcrumb {
+	background: transparent;
+	padding: 10px 0;
+	margin-bottom: 5px}
+
+.breadcrumb li a {
+	color:#00567c;}
+
+
+/* ESTILOS GENERALES CAJAS */
+
+.caja{
+	background: white;
+	box-shadow: 1px 1px 5px #888888;
+	margin-top:30px;}
+
+.caja-interior p {
+	font-size: 12px;
+}
+
+
+.caja-interior {
+	padding: 15px;
+	padding-top: 5px;
+}
+
+.caja-color {	
+	width: 100px;
+	height: 100px;
+	margin:10px;
+	border-radius: 5px;
+	font-size:70px;
+	color: white;
+	text-align: center}
+
+.caja-color a {
+	color:white;
+	display: block;
+	position:relative;}
+
+.caja-color a:hover {
+	text-decoration:none;}
+
+a .caja-interior {
+	color:#333;}
+
+
+/* ESTILOS ESPECIFICOS CAJAS */
+
+.A .caja-color {background: darkgray}
+.A h3 {color: darkgray}
+
+.B .caja-color {background: darkred}
+.B h3 {color: darkred}
+
+.C .caja-color {background: darkslategrey}
+.C h3 {color: darkslategrey}
+
+.D .caja-color {background: indigo}
+.D h3 {color: indigo}
+
+.E .caja-color {background: darkolivegreen}
+.E h3 {color: darkolivegreen}
+
+.F .caja-color {background: royalblue}
+.F h3 {color: royalblue}
+
+.G .caja-color {background: forestgreen}
+.G h3 {color: forestgreen}
+
+.H .caja-color {background: steelblue}
+.H h3 {color: steelblue}
+
+.I .caja-color {background: palevioletred}
+.I h3 {color: palevioletred}
+
+.J .caja-color {background: lightseagreen}
+.J h3 {color: lightseagreen}
+
+.K .caja-color {background: tomato}
+.K h3 {color: tomato}
+
+.L .caja-color {background: firebrick}
+.L h3 {color: firebrick}
+
+.M .caja-color {background: orange}
+.M h3 {color: orange}
+
+.N .caja-color {background: darkorange}
+.N h3 {color: darkorange}
+
+.O .caja-color {background: darkblue}
+.O h3 {color: darkblue}
+
+.P .caja-color {background: teal}
+.P h3 {color: teal}
+
+.Q .caja-color {background: salmon}
+.Q h3 {color: salmon}
+
+.R .caja-color {background: sienna}
+.R h3 {color: sienna}
+
+.S .caja-color {background: seagreen}
+.S h3 {color: seagreen}
+
+.T .caja-color {background: crimson}
+.T h3 {color: crimson}
+
+.U .caja-color {background: lightcoral}
+.U h3 {color: lightcoral}
+
+.V .caja-color {background: indianred}
+.V h3 {color: indianred}
+
+.W .caja-color {background: black}
+.W h3 {color: black}
+
+.X .caja-color {background: chocolate}
+.X h3 {color: chocolate}
+
+.Y .caja-color {background: darkmagenta}
+.Y h3 {color: darkmagenta}
+
+.Z .caja-color {background: brown}
+.Z h3 {color: brown}
+
+.carpeta .caja-color {background: darkkhaki}
+.carpeta h3 {color: darkkhaki }
+
+
+.glyphicon-folder-open {
+	font-size: 60px;
+	position:absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -34px;
+	margin-top: -32px}
+
+
+/* FOOTER */
+
+.barra-negra {
+	background: black; 
+	padding: 10px 0;}
+
+.barra-negra .nav>li>a {
+	color:#dadada;}
+
+.barra-negra .nav>li>a:hover{
+	background: none;
+	color:white;}
+
+.barra-negra .nav-pills>li.active>a{
+	background: none;
+	font-weight: bold;
+	color:#00567c;
+	border:transparent;}
+
+
+.navbar-brand-pie span {
+	font-size: 12.5px;
+	color: #337ab7;}
+
+.navbar-brand-pie {    
+	color: #9d9d9d;
+	float: left;
+	height: 50px;
+	padding: 7px 15px;
+	font-size: 16px;
+	line-height: 20px;
+	margin-right: 10px;}
+
+  .navbar-brand-dos {
+  	float: left;
+	height: 50px;
+	padding: 15px 15px;
+	font-size: 18px;
+	line-height: 20px;}
+
+.navbar-brand-pie:hover, .navbar-brand-pie:active, 
+.navbar-brand-pie:visited, .navbar-brand-pie:focus {
+	text-decoration: none; color:white;}
+
+
+
+/* RESPONSIVE INDEX */
+
+@media screen and (max-width:767px) {
+ 
+.nombre li:last-child, .nombre li span {
+	display: none}
+
+.nombre li:first-child:after {
+	content:" | ";}
+
+.nombre li {
+	display:inline-block; 
+	margin-top: 10px;
+	padding: 10px 0}
+
+.glyphicon-remove-circle {
+	padding: 0; 
+	margin-top: 25px}
+}
+
+@media screen and (max-width:400px) {
+
+.navbar-brand-dos {
+	display:none;}
+
+.navbar-brand-movil {
+	display:block; 
+	padding: 10px 0 0 0;
+	text-align: center}
+}
+
+
+/* PAGINA LOGIN */
+
+.login {
+	padding: 30px 0;
+	margin: 0 15px 30px 15px}
+
+
+.login h1 {
+	border:transparent;
+	color:grey;
+	text-transform: none;
+	text-align: center;}
+
+
+.login h4 {
+	color: #00567c;
+	font-size: 16px;
+	font-family: 'Roboto Condensed', sans-serif;
+	padding: 0 20px;
+	text-align: center;
+}
+
+.login img {
+	display: block;
+	margin: 0 auto;}
+
+.container-login {
+	background:white; 
+	padding:15px;
+	border-top: 15px solid #00567c;
+	margin: 10px 0}
+
+.container-acerca {
+	background:white; 
+	padding:15px;
+	border-top: 15px solid #00567c;
+	margin: 10px 0}
+
+input {
+	margin: 15px 0}
+
+.btn-primary {
+	background: #00567c; 
+	font-size: 16px}
+
+
+/* RESPONSIVE LOGIN */
+
+
+@media screen and (max-width:991px) {
+
+.container-login {
+	width:50%;
+	margin: 0 auto}
+
+}
+
+@media screen and (max-width:760px) {
+
+.container-login {
+	width:50%; 
+	margin: 0 auto}
+}
+
+@media screen and (max-width:560px) {
+
+.container-login {
+	width:85%; 
+	margin: 0 auto}
+}
+
+
+/* PAGINA ACERCA DE */
+
+.container-login p {
+	font-size: 14px;
+	text-align: left;
+	color: #7a7a7a;
+	font-weight: 400;
+	margin:0 !important;; 
+}
+
+.cabecera-acerca {
+	border-bottom: 1px solid #00567c;
+	padding-bottom: 15px;
+	margin-bottom: 15px}
+
+.descripcion-acerca li {
+	padding-left:50px;
+	font-size: 14px;
+	text-align: left;
+	color: #7a7a7a;
+	font-weight: 400;
+	}

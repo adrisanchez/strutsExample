@@ -1,0 +1,45 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<!-- Plantillas -->
+	
+    <definition name="cabeceraPublic" template="/jsp/tiles/base/cabeceraPublic.jsp"/>
+    <definition name="cabecera" template="/jsp/tiles/base/cabecera.jsp"/>
+    <definition name="menu_superior" template="/jsp/tiles/base/menu_superior.jsp"/>
+    <definition name="footer" template="/jsp/tiles/base/footer.jsp"/>
+	
+    <definition name="tile.plantillaBasePublic" template="/jsp/tiles/base/plantillaBasePublic.jsp">
+        <put-attribute name="cabeceraPublic"     value="cabeceraPublic" type="definition"/>
+        <put-attribute name="footer"             value="footer" 		type="definition"/>
+    </definition>
+    
+    <definition name="tile.plantillaBase" template="/jsp/tiles/base/plantillaBase.jsp">
+        <put-attribute name="cabecera"  		value="cabecera" 		  type="definition"/>
+        <put-attribute name="menu_superior"     value="menu_superior"     type="definition"/>
+        <put-attribute name="footer"    		value="footer"   	      type="definition"/>
+    </definition>
+    
+    <definition name="tile.login" extends="tile.plantillaBasePublic">
+		<put-attribute name="contenido"    value="/jsp/principal/login.jsp"/>
+	</definition>
+	
+	<definition name="tile.inicio" extends="tile.plantillaBase">
+		<put-attribute name="acerca_de"     	value="yes" />
+		<put-attribute name="titulo"       		value=""/>
+		<put-attribute name="contenido"    		value="/jsp/principal/inicio.jsp"/>
+	</definition>
+
+	<definition name="tile.test" extends="tile.plantillaBase">
+		<put-attribute name="acerca_de"     	value="no" />
+		<put-attribute name="titulo"       		value="example.jsp.gestion.titulo"/>
+		<put-attribute name="contenido"    		value="/jsp/principal/test.jsp"/>
+	</definition>
+
+	<definition name="tile.acercade" extends="tile.plantillaBase">
+		<put-attribute name="acerca_de"     	value="yes" />
+		<put-attribute name="contenido"    		value="/jsp/principal/acerca_de.jsp"/>
+	</definition>	
+	
+</tiles-definitions>
